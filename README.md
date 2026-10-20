@@ -470,3 +470,8 @@ And that’s it! You’ve now completed your first lab assignment using GitHub a
 3. You can now view the project in the browser by clicking the "Application" port in the Ports panel.
 
 Follow the instructions in the previous sections to complete the lab.
+
+
+## API regression checks
+
+Run `npm ci`, set `MONGODB_URI` to an isolated MongoDB test database, then run `npm test`. The test creates and removes its own product and order and verifies the CRUD endpoints. GitHub Actions starts a disposable MongoDB 7 service for this check.
